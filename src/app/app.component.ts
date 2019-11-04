@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  loginVisible: boolean = true
+  mailApp:string
+  logginSuccess: boolean = false
+
+  doLogin(event){
+    this.logginSuccess = true
+    this.mailApp = event
+  }
+
+  doLogout(){
+    this.logginSuccess = false
+  }
 }
