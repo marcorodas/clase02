@@ -1,3 +1,3 @@
-# angular-srapiz
+# clase02-login
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-srapiz)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/clase02-login)
