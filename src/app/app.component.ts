@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   mailApp:string
-  logginSuccess: boolean = true
+  logginSuccess: boolean = false
 
   doLogin(event){
     this.logginSuccess = true
