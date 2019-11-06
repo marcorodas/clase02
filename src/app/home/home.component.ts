@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { UsuarioService } from './../usuario.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class HomeComponent{
   @Input() mailHome:string
   @Output() onLogout = new EventEmitter()
-  displayFrame:boolean = true
+  displayFrame:boolean = false
+  lista: Array<string> = ["Carmen", "Marcela", "Oscar", "Eduardo"]
+  
+  constructor(private instancia:UsuarioService){}
+
   logout(){
     this.onLogout.emit();
   }

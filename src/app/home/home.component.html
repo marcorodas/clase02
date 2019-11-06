@@ -1,3 +1,10 @@
 <h1>Bienvenido {{mailHome}}!</h1> 
+<p>{{instancia.correo}}</p>
+<p>{{instancia.contrasena}}</p>
 <a href="#" (click)="logout()">Logout</a>
+<ul>
+  <li *ngFor="let item of lista">{{item}}</li>
+</ul>
+<app-formulario>loading...</app-formulario>
+<app-listado>loading...</app-listado>
 <iframe *ngIf="displayFrame" src="https://templatemag.com/demo/Dashio/"></iframe>

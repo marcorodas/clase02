@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { UsuarioService } from './../usuario.service';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,8 @@ export class LoginComponent {
   errorMail:string
   errorPass:string
   @Output() onLogging = new EventEmitter()
+
+  constructor(private instancia:UsuarioService){}
 
   onMailTyped(e){
     this.mail = e.target.value.trim()
@@ -41,6 +44,9 @@ export class LoginComponent {
     }
     if(!this.errorMail && !this.errorPass){
       this.onLogging.emit(this.mail)
+      this.instancia.correo = this.mail
+      this.instancia.contrasena = this.pass
+      this.instancia.loginUsuario()
     }
   }  
 }
